@@ -15,22 +15,25 @@
         <div class="title">
             <h1>Contact Us</h1>
         </div>
-        <div class="contact-form">
-            <div class="input-fields">
-                <form action="contact.php" method="post">
-                    <input type="text" class="input" name="name" placeholder="Name" required/>
-                    <input type="email" class="input" name="email" placeholder="Email" required/>
-                    <input type="number" class="input" name="phone" placeholder="Phone" required/>
-                    <input type="text" class="input" name="subject" placeholder="Subject" required/>
-            </div>
-            <div class="msg">
-                <textarea placeholder="Message" name="message"></textarea>
-                <div class="btn">
-                    <input type="submit" name="submit" value="SEND" />
+
+        <form action="contact.php" method="post">
+            <div class="contact-form">
+                <div class="input-fields">
+                    <input type="text" class="input" name="name" placeholder="Name" required />
+                    <input type="email" class="input" name="email" placeholder="Email" required />
+                    <input type="number" class="input" name="phone" placeholder="Phone" min="1000000000" max="9999999999" required />
+                    <input type="text" class="input" name="subject" placeholder="Subject" required />
+                </div>
+                <div class="msg">
+                    <div>
+                        <textarea placeholder="Message" name="message"></textarea>
+                    </div>
+                    <div class="btn">
+                        <input type="submit" name="submit" value="SEND" />
+                    </div>
                 </div>
             </div>
-            </form>
-        </div>
+        </form>
     </div>
 </body>
 

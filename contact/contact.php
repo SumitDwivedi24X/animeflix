@@ -14,4 +14,15 @@ if ($conn->connect_error) {
     $phone = $_POST['phone'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+
+    $sql = " INSERT INTO 'contact'('name', 'email', 'phone', 'subject', 'message') VALUES 
+   ('$name', '$email', '$phone', '$subject', '$message', current_timestamp()); ";
+
+    if ($con->query($sql) == true) {
+        echo "Thanks for reaching out to us!!";
+    } else {
+        echo "Something went wrong!";
+    }
+
+    $conn->close();
 }
